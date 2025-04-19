@@ -270,7 +270,7 @@ function printRecipe() {
                 <title>${modalTitle.textContent}</title>
                 <style>
                     body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
-                    h1 { color: #ff6b6b; }
+                    h1 { color:rgb(18, 156, 8); }
                     h2 { color: #666; margin-top: 20px; }
                     img { margin: 10px 0; }
                 </style>
@@ -285,3 +285,8 @@ function printRecipe() {
     `);
     printWindow.document.close();
 }
+
+
+
+
+

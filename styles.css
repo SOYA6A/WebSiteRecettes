@@ -340,7 +340,7 @@ body {
 }
 
 .btn-favorite:hover {
-    background-color: #e0c255;
+    background-color: #e05555;
 }
 
 .modal-body {
@@ -441,3 +441,4 @@ body {
         flex: 2;
     }
 }
+
