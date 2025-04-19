@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef's Choice - Recettes Interactives</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Chef's <span>Choice</span></h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Rechercher des recettes...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <button id="random-btn" class="btn-random">Recette Aléatoire <i class="fas fa-random"></i></button>
+        </div>
+    </header>
+
+    <div class="filters-container">
+        <div class="container">
+            <div class="filter-group">
+                <label for="diet-filter">Régime :</label>
+                <select id="diet-filter">
+                    <option value="">Tous</option>
+                    <option value="vegetarian">Végétarien</option>
+                    <option value="vegan">Végan</option>
+                    <option value="glutenFree">Sans gluten</option>
+                    <option value="ketogenic">Kétogénique</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="type-filter">Type :</label>
+                <select id="type-filter">
+                    <option value="">Tous</option>
+                    <option value="main course">Plat principal</option>
+                    <option value="side dish">Accompagnement</option>
+                    <option value="dessert">Dessert</option>
+                    <option value="appetizer">Apéritif</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="ingredient-filter">Ingrédient :</label>
+                <input type="text" id="ingredient-filter" placeholder="Ex: poulet, tomate...">
+            </div>
+            <button id="apply-filters" class="btn-apply">Appliquer</button>
+        </div>
+    </div>
+
+    <main class="container">
+        <div id="results-count"></div>
+        <div id="recipes-container" class="recipes-grid"></div>
+        <div id="loading-spinner" class="spinner hidden">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
+        </div>
+        <button id="load-more" class="btn-load-more hidden">Charger plus de recettes</button>
+    </main>
+
+    <div id="recipe-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <div class="modal-actions">
+                    <button id="print-btn" class="btn-print"><i class="fas fa-print"></i> Imprimer</button>
+                    <button id="favorite-btn" class="btn-favorite"><i class="far fa-heart"></i> Favoris</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-image" src="" alt="">
+                    <div class="recipe-info">
+                        <p><i class="fas fa-clock"></i> <span id="modal-time"></span> min</p>
+                        <p><i class="fas fa-utensils"></i> <span id="modal-servings"></span> personnes</p>
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <h3>Ingrédients</h3>
+                    <ul id="modal-ingredients"></ul>
+                    <h3>Instructions</h3>
+                    <ol id="modal-instructions"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
